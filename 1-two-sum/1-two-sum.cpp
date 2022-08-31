@@ -7,15 +7,13 @@ public:
         {
            int num2 = target - nums[i];
 
-            if(m.find(num2) == m.end())
-                m.insert({nums[i],i});
-                
-            else
+            if(m.find(num2) != m.end())
             {
                res.push_back(i); 
                res.push_back(m.at(num2));
                return res;
             }
+        m.insert({nums[i],i});
         }
         return res;
     }
