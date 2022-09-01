@@ -2,27 +2,30 @@ class Solution {
 public:
     bool checkValid(vector<vector<int>>& matrix) {
 
-        
-        //int col=matrix[0].size();
-        for(int i=0;i< matrix.size();i++)
+        for(int i = 0; i < matrix.size(); i++)
         {
-            set<int>s;
-            for(int j=0;j< matrix[0].size();j++)
+            set<int> s;
+            for(int j = 0; j < matrix[0].size(); j++)
             {
                 s.insert(matrix[i][j]);
             }
-            if(s.size()!= matrix.size())
+            if(s.size() != matrix.size())
                 return false;
         }
-        for(int i=0;i<matrix[0].size();i++){
-            set<int>s;
-            for(int j=0;j<matrix.size();j++){
+        
+        for(int i = 0; i < matrix[0].size(); i++)
+        {
+            set<int> s;
+            
+            for(int j = 0; j < matrix.size(); j++)
+            {
                 s.insert(matrix[j][i]);
             }
             if(s.size() != matrix.size())
                 return false;
         }
-        return true;
+        
+         return true;
     }
    
 };
