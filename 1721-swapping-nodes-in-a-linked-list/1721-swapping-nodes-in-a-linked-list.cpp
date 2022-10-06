@@ -31,8 +31,9 @@ public:
         while(res)
         {
             res->val = sw[i];
-            i++;
+            
             res = res->next;
+            i++;
         }
         
         return head;
