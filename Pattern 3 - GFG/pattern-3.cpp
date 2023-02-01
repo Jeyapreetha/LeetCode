@@ -9,13 +9,13 @@ class Solution {
     void printTriangle(int n) {
         // code here
         
-        for(int i = 0; i < n; i++)
+        for(int i = 1; i <= n; i++)
         {
-            int c = 0;
-            for(int j = 0; j <= i; j++)
+            
+            for(int j = 1; j <= i; j++)
             {
-                c = c+1;
-                cout <<c<< " ";
+               
+                cout <<j<< " ";
             }
             cout << endl;
         }
